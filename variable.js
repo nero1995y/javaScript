@@ -1,4 +1,29 @@
 'use strict';
+// 2. variable
+let names = 'sims';
+console.log(names);
+names = 'hello';
+console.log(names);
+
+//3. Contants
+// favor immutable data type always for a few reasons;
+// - security
+// - thread safety  동시 변수 접근은 위험 
+// - reduce human mistakes 실수방지
+
+//4. variable type 
+// primitive, single item: number, string , boolean, null undefiedn
+
+const infinity = 1/0; // 무한대
+const negativeInfinity = -1/0;
+const nAn = 'not a number' /2;
+
+console.log('======================')
+console.log(infinity);
+console.log(negativeInfinity);
+console.log(nAn);
+console.log('======================')
+// 나중에 계산실수  조심해야함 !! 
 
 // boolean
 // false: 0, null, undefind, NaN, ''
@@ -53,3 +78,4 @@ const sim = { names: 'sim', age: 21};
 sim.age =21; //변경가능 안에있는것 
 
 //playground  확인하면서 노는것이당 ! 
+//자바 스크립트 옵젝은 변경이 가능하다. 
