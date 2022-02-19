@@ -87,11 +87,115 @@ console.log(stringFive === numberFive);
 console.log(stringFive !== numberFive);
 
 // object equality by reference
-const sims1 = {names: 'sims'};
-const sims2 = {names: 'sims'};
-const sims3 = sims1;
+const sims1 = {names: 'sims'}; //다른 레퍼런스
+const sims2 = {names: 'sims'}; //다른
+const sims3 = sims1;  //같은 레퍼런스
 
 console.log('object equality by reference')
 console.log(sims1 == sims2);
 console.log(sims1 === sims2);
 console.log(sims1 === sims3);
+
+//equality - puzzler
+console.log('=============');
+
+console.log(0 == false); //ture
+console.log(0 === false); // 불리언타입이 아니라서 
+console.log('' == false);
+console.log('' === false);
+console.log(null == undefined);
+console.log(null === undefined);  //다른타입이라서 
+
+//프로그래밍의 꽃 루프
+//8. Conditional operators: if
+const nameCon = 'sims';
+
+if(nameCon == 'sims'){
+  console.log('Welcome, sims');
+    
+} else if(nameCon === 'coder'){
+  console.log('You are amazing coder');
+    
+} else{
+  console.log('unkwon');
+
+}
+
+// 9.  Ternary operator: ?      //삼항연산자
+// condition ? value : value?;
+// 간단할때만 사용하는것이 좋다
+console.log(nameCon === 'sims'? 'yes': 'no');
+
+// 10. Swith statemnet 
+// use for multiple if checks
+// use for enum-like value check
+// use for multiple type checks in Ts
+const browser = 'IE';
+
+switch(browser){
+    case 'IE':
+        console.log('go away!');
+        break;
+    case 'Chrome':
+    case 'Firefox':
+        console.log('love you');
+        break;
+    default:
+        console.log('same all!');
+        break;
+}
+
+//11. loops
+// while loop, whule the condition is truthy,
+// body codes is executed.
+let i = 3;
+while(i > 0){ // 조건이 해당할때 까지 
+    console.log(`while: ${i}`);
+    i --;
+}
+//do while loop, body code is executed first, 
+//then check the condition. 
+//블럭을 먼저 실행하고싶으면 do 아니면 노말 와일
+do{
+  console.log(`do while: ${i}`);  //코드블럭 먼저 실행되고
+  i--;
+} while (i>0);
+
+//for loop, for(begin; condition; step)
+for ( i = 3; i > 0; i--) {
+    console.log(`for: ${i}`);
+}
+
+// 코드안에서 변서 순언하는 inline varilable declaration
+for (let i = 3; i > 0; i--) {
+    console.log(`for: ${i}`);
+}
+// nested loops
+for (let i = 0; i < 10; i++) {
+    for(let j = 0; j < 10; j++ ){
+        console.log(`i: ${i}, j: ${j}`);
+    }
+        
+}
+
+//break , continue
+// brack 는 루프를 빠져나옴
+// 컨티뉴는 지금꺼만 스킵 
+// Q1, iterate from 0 to an print only even nubers (use continue)
+for (let i = 0; i < 11; i++) {
+  if((i % 2) !== 0 ){
+      continue;
+  }   
+  console.log(`q1${i}`);           
+}
+
+// Q2, iterate from 0 to 10 and pirnt nubers until reaching 8 user break;
+
+for (let i = 0; i < 10; i++) {
+  
+    if(i > 8){
+        break;
+    
+    }              
+    console.log(i); 
+}
