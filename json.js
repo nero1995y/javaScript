@@ -61,5 +61,6 @@ rabbit.jump();
 
 console.log(rabbit.birthDate.getDate());
 console.log(obj.birthDate.getDate()); //string이기때문에 함수를 사용 할 수 없다.
+//콜백으로 선언하고 뉴데이트로 다시 반환해줘야한다.
  
 
